@@ -15,4 +15,4 @@
   roles:
     - role: geerlingguy.java
     - role: geerlingguy.jenkins
-
+    - role: geerlingguy.docker
