@@ -1,0 +1,18 @@
+- hosts: localhost
+  become: true
+  
+  vars:
+    jenkins_hostname: localhost
+    jenkins_http_port: 8080
+    java_packages:
+      - java-1.8.0-openjdk
+    jenkins_plugins:
+      - blueocean
+      - git
+    jenkins_admin_username: admin
+    jenkins_admin_password: admin
+
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins
+
