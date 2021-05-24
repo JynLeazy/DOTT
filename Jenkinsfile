@@ -10,7 +10,7 @@ pipeline {
 
       }
       steps {
-        sh 'go --version'
+        sh 'go version'
       }
     }
 
