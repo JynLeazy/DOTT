@@ -34,3 +34,16 @@ Ansible Roles
     
 
   
+Reading the DOCKERFILE (DF)
+This is how FROM works https://docs.docker.com/engine/reference/builder/#from
+The DF, take the golang:1.10-alpine image and installed, that image can be replaced with the newest golang:alpine3.13
+This is how ENV works https://docs.docker.com/engine/reference/builder/#env
+the DF will create the enviroment funtion GOPATH and give it the path "/go:/app"
+This is how RUN works https://docs.docker.com/engine/reference/builder/#run
+The DF will install git
+This is how WORKDIR works https://docs.docker.com/engine/reference/builder/#workdir
+The DF will create and move to the directory "/app"
+This is how COPY works https://docs.docker.com/engine/reference/builder/#copy
+The DF will copy goopfile from (my repo) "/go" and copy to the docker "/app"
+The next RUN, install goop from the repo give it (github.com/Pepegasca/goop)
+The next COPY, will copy all "/go/" directory
