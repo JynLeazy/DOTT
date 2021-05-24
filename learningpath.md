@@ -53,8 +53,16 @@ Ansible Roles
       
       some documentation for sonarqube
       https://docs.sonarqube.org/latest/setup/install-server/
+      https://www.youtube.com/watch?v=pufcNkJPvxw
       
+      jenkins pluggin for sonarscanner
+      https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
       
+      exec commands inside docker container
+      https://www.edureka.co/community/10588/how-can-i-run-a-docker-exec-command-inside-a-docker-container
+      
+      github token for jenkins
+      https://github.com/settings/tokens/new?scopes=repo,read:user,user:email,write:repo_hook
  GO
     
 
@@ -77,7 +85,9 @@ The next COPY, will copy all "/go/" directory
 
 
 
-
+Allow jenkins run docker
+https://docs.docker.com/engine/install/linux-postinstall/
+https://stackoverflow.com/questions/39638772/make-jenkins-run-docker-without-sudo
 
 
 SSH aws connection  error :|
