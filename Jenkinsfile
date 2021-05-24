@@ -11,8 +11,9 @@ pipeline {
       }
       steps {
         sh '''go version
-ls
-pwd'''
+cd cidr_convert_api/go/'''
+        sh '''pwd
+ls'''
       }
     }
 
