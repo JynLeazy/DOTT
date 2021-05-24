@@ -32,10 +32,27 @@ Ansible Roles
   SonarQube Role
   
   
+  
       #Unfourtanly i didnt found a Geerling repo for this role
       but i found this 2, but I'll try both, before decide which use
       https://github.com/lrk/ansible-role-sonarqube
       https://github.com/lean-delivery/ansible-role-sonarqube
+      also i found this web about ansible sonarqube role 
+      https://medium.com/@mattpwest/setting-up-sonarqube-with-ansible-fcabadee6953
+      and i also found
+      https://aws.amazon.com/premiumsupport/knowledge-center/ec2-enable-epel/
+      that amazon linux need yo enable epel (Extra Packages for Enterprise Linux), to install it
+      
+      After several tries, i move to docker container 
+      https://hub.docker.com/_/sonarqube?tab=description
+      https://docs.sonarqube.org/latest/setup/get-started-2-minutes/
+      
+      i used this command
+      
+      docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+      
+      some documentation for sonarqube
+      https://docs.sonarqube.org/latest/setup/install-server/
       
       
  GO
@@ -62,6 +79,10 @@ The next COPY, will copy all "/go/" directory
 
 
 
+
+SSH aws connection  error :|
+
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-connection-errors/
 
 
 
