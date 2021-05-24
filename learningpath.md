@@ -95,7 +95,8 @@ SSH aws connection  error :|
 https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-connection-errors/
 
 
-
+Jenkinsfile
+https://stackoverflow.com/questions/52372589/jenkins-pipeline-how-to-change-to-another-folder
 
 https://golang.org/doc/tutorial/compile-install
 https://ieftimov.com/post/testing-in-go-go-test/
