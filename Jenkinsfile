@@ -17,6 +17,8 @@ GOCACHE=/app/.cache
 apk add --update git'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls
+cp . /app
+ls /app
 #go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
@@ -26,7 +28,7 @@ go mod tidy
 go build api.go convert.go
 ls
 #go run api.go convert.go'''
-          archiveArtifacts 'api api.go convert.go'
+          archiveArtifacts 'api'
           sh './api'
         }
 
