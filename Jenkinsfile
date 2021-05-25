@@ -36,6 +36,7 @@ ls
 go test'''
         }
 
+        junit(testResults: 'reports.xml', allowEmptyResults: true)
       }
     }
 
