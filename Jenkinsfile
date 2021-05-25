@@ -27,6 +27,7 @@ ls
 '''
         }
 
+        archiveArtifacts 'doot'
       }
     }
 
