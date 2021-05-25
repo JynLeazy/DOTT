@@ -26,7 +26,7 @@ go install
 '''
         }
 
-        archiveArtifacts 'aritifact'
+        archiveArtifacts 'artifacts.zip'
       }
     }
 
