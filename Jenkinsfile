@@ -32,9 +32,9 @@ ls
 #go run api.go convert.go
 '''
           archiveArtifacts 'api'
+          sh 'go test'
         }
 
-        sh 'go test'
       }
     }
 
