@@ -20,6 +20,7 @@ apk add --update git
           sh '''ls
 ls /app
 cp ./* /app
+ls /app
 #go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
@@ -30,7 +31,6 @@ go build api.go convert.go
 ls
 #go run api.go convert.go'''
           archiveArtifacts 'api'
-          sh './api'
         }
 
       }
