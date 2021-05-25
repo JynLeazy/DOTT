@@ -23,7 +23,7 @@ go get github.com/stretchr/testify/assert
 go mod init doot
 go mod tidy
 go build
-go run api.go -p 8000:8000
+go run -it -p 8000:8000
 '''
           archiveArtifacts 'doot'
         }
