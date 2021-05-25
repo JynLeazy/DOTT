@@ -47,7 +47,7 @@ ls
       steps {
         dir(path: '/app') {
           sh '''ls
-go test'''
+'''
         }
 
       }
