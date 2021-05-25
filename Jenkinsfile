@@ -14,11 +14,12 @@ pipeline {
 GOPATH=/app
 #mkdir /app/.cache
 GOCACHE=/app/.cache
-apk add --update git'''
+apk add --update git
+'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls
-cp /go /app
 ls /app
+cp . /app
 #go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
