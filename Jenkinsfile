@@ -15,10 +15,10 @@ GOPATH=/app
 mkdir /app/.cache
 GOCACHE=/app/.cache'''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''ls -lah /
-go get github.com/gorilla/mux
+          sh '''go get github.com/gorilla/mux
 go get github.com/pkg/errors
-go get github.com/stretchr/testify/assert'''
+go get github.com/stretchr/testify/assert
+go install'''
         }
 
       }
