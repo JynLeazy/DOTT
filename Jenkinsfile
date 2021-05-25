@@ -53,7 +53,7 @@ ls
 
       }
       steps {
-        dir(path: '/app')
+        dir(path: 'cidr_convert_api/go/')
       }
     }
 
