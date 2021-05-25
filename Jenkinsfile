@@ -23,10 +23,9 @@ go get github.com/stretchr/testify/assert
 go mod init doot
 go mod tidy
 go install
-'''
+go run api.go convert.go '''
         }
 
-        archiveArtifacts(fingerprint: true, artifacts: 'goart')
       }
     }
 
