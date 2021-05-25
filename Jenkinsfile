@@ -34,6 +34,7 @@ ls
           archiveArtifacts 'api'
           sh '''apk add build-base
 go test'''
+          warnError(message: 'tests failed')
         }
 
         junit(testResults: 'reports.xml', allowEmptyResults: true)
