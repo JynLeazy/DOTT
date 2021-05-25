@@ -23,10 +23,10 @@ go get github.com/stretchr/testify/assert
 go mod init doot
 go mod tidy
 go install
+ls
 '''
         }
 
-        archiveArtifacts 'artifacts.zip'
       }
     }
 
