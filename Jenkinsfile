@@ -36,5 +36,22 @@ ls
       }
     }
 
+    stage('') {
+      agent {
+        docker {
+          args '-v $HOME/jenkins:/app -p 8000:8000'
+          image 'golang:alpine3.13'
+        }
+
+      }
+      steps {
+        dir(path: '/app') {
+          sh '''ls
+go test'''
+        }
+
+      }
+    }
+
   }
 }
