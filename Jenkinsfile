@@ -33,9 +33,12 @@ ls
 '''
           archiveArtifacts 'api'
           sh '''apk add build-base
-go test
-set +e'''
-          catchError(message: 'failed unit tests', catchInterruptions: true)
+'''
+          catchError(message: 'failed unit tests', catchInterruptions: true) {
+            sh '''go test
+#set +e'''
+          }
+
         }
 
       }
