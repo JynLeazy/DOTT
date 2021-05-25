@@ -19,7 +19,7 @@ apk add --update git'''
           sh '''go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
-cd ../.. && go mod init
+go mod init
 go install
 '''
         }
