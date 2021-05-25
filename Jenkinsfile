@@ -25,9 +25,9 @@ go mod tidy
 go build
 ls
 '''
+          archiveArtifacts 'doot'
         }
 
-        archiveArtifacts 'doot'
       }
     }
 
