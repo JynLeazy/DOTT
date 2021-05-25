@@ -68,6 +68,12 @@ Ansible Roles
 how install a packege withgo
 https://stackoverflow.com/questions/30295146/how-can-i-install-a-package-with-go-
 https://golang.org/cmd/go/
+
+Where does go get install packages?
+https://stackoverflow.com/questions/50633092/where-does-go-get-install-packages
+
+how change cache do dir
+https://stackoverflow.com/questions/48983303/how-to-change-cache-directory-during-the-go-build-process
   
 Reading the DOCKERFILE (DF)
 
@@ -99,7 +105,14 @@ https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-con
 
 
 Jenkinsfile
+Jenkins pipeline how to change to another folder
 https://stackoverflow.com/questions/52372589/jenkins-pipeline-how-to-change-to-another-folder
+
+
+Run Jenkins as a root, in case jenkins don´t have persmissions to create directorys
+https://stackoverflow.com/questions/29926773/run-shell-command-in-jenkins-as-root-user
+https://stackoverflow.com/questions/50646845/getting-sudo-unknown-uid-xxx-who-are-you-in-jenkins-pipeline-thats-building
+https://docs.docker.com/engine/install/linux-postinstall/
 
 https://golang.org/doc/tutorial/compile-install
 https://ieftimov.com/post/testing-in-go-go-test/
