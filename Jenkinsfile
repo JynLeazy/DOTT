@@ -13,7 +13,8 @@ pipeline {
         sh '''go version
 GOPATH=/app
 #mkdir /app/.cache
-GOCACHE=/app/.cache'''
+GOCACHE=/app/.cache
+yum install git'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''go get github.com/gorilla/mux
 go get github.com/pkg/errors
