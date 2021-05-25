@@ -16,15 +16,15 @@ GOPATH=/app
 GOCACHE=/app/.cache
 apk add --update git'''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''go get github.com/Pepegasca/goop
+          sh '''
+go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
-go mod init doot
-go mod tidy
-go build
-go run -it -p 8000:8000
-'''
+#go mod init doot
+#go mod tidy
+#go build api.go
+go run api.go convert.go'''
           archiveArtifacts 'doot'
         }
 
