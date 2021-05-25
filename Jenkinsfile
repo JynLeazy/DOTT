@@ -26,6 +26,7 @@ go install
 '''
         }
 
+        archiveArtifacts(fingerprint: true, artifacts: 'goart')
       }
     }
 
