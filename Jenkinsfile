@@ -20,7 +20,8 @@ apk add --update git'''
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
-goop install
+go mod init doot
+go install
 '''
         }
 
