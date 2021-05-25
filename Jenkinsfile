@@ -33,7 +33,7 @@ ls
 '''
           archiveArtifacts 'api'
           sh '''apk add build-base
-go test api.go convert.go'''
+go test convert_test.go'''
           catchError(message: 'failed unit tests', catchInterruptions: true)
         }
 
