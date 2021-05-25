@@ -11,7 +11,9 @@ pipeline {
       }
       steps {
         sh '''go version
-GOPATH=/app'''
+GOPATH=/app
+mkdir /app/.cache
+GOCACHE=/app/.cache'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls -lah /
 go get github.com/gorilla/mux
