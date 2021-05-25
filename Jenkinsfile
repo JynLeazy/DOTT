@@ -16,12 +16,10 @@ GOPATH=/app
 GOCACHE=/app/.cache
 apk add --update git'''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''cp Goopfile Goopfile
-go get github.com/Pepegasca/goop
+          sh '''go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
-go mod init
 goop install
 '''
         }
