@@ -26,6 +26,7 @@ go mod tidy
 go build api.go convert.go
 ls
 #go run api.go convert.go'''
+          archiveArtifacts 'api'
         }
 
       }
