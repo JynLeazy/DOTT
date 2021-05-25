@@ -29,7 +29,8 @@ go mod init doot
 go mod tidy
 go build api.go convert.go
 ls
-#go run api.go convert.go'''
+#go run api.go convert.go
+go test'''
           archiveArtifacts 'api'
         }
 
@@ -45,12 +46,7 @@ ls
 
       }
       steps {
-        dir(path: '/app') {
-          sh '''pwd
-ls
-'''
-        }
-
+        dir(path: '/app')
       }
     }
 
