@@ -55,7 +55,10 @@ ls
       steps {
         sh '''pwd
 ls'''
-        dir(path: 'cidr_convert_api/go/')
+        dir(path: 'cidr_convert_api/go/') {
+          sh 'ls'
+        }
+
       }
     }
 
