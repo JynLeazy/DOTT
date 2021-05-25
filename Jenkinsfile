@@ -19,7 +19,7 @@ apk add --update git
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls
 ls /app
-cp . /app
+cp ./* /app
 #go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
