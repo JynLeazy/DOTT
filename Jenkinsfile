@@ -11,7 +11,7 @@ pipeline {
       }
       steps {
         sh '''go version
-cd cidr_convert_api/go/'''
+GOPATH=/app'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''whoami
 ls -lah /
