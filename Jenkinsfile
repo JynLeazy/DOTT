@@ -13,11 +13,10 @@ pipeline {
         sh '''go version
 GOPATH=/app'''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''whoami
-ls -lah /
-#go get github.com/gorilla/mux
-#go get github.com/pkg/errors
-#go get github.com/stretchr/testify/assert'''
+          sh '''ls -lah /
+go get github.com/gorilla/mux
+go get github.com/pkg/errors
+go get github.com/stretchr/testify/assert'''
         }
 
       }
