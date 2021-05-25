@@ -65,7 +65,9 @@ Ansible Roles
       https://github.com/settings/tokens/new?scopes=repo,read:user,user:email,write:repo_hook
  GO
     
-
+how install a packege withgo
+https://stackoverflow.com/questions/30295146/how-can-i-install-a-package-with-go-
+https://golang.org/cmd/go/
   
 Reading the DOCKERFILE (DF)
 
@@ -82,6 +84,7 @@ This is how COPY works https://docs.docker.com/engine/reference/builder/#copy
 The DF will copy goopfile from (my repo) "/go" and copy to the docker "/app"
 The next RUN, install goop from the repo give it (github.com/Pepegasca/goop)
 The next COPY, will copy all "/go/" directory
+
 
 
 
