@@ -34,10 +34,9 @@ ls
           archiveArtifacts 'api'
           sh '''apk add build-base
 go test'''
-          catchError(buildResult: 'SUCCESS', message: 'failed unit tests', stageResult: 'SUCCESS', catchInterruptions: true)
+          catchError(message: 'failed unit tests', catchInterruptions: true)
         }
 
-        junit(testResults: 'reports.xml', allowEmptyResults: true)
       }
     }
 
@@ -51,6 +50,12 @@ go test'''
       }
       steps {
         dir(path: '/app')
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        junit(testResults: '.xml', allowEmptyResults: true)
       }
     }
 
