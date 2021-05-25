@@ -46,7 +46,8 @@ ls
       }
       steps {
         dir(path: '/app') {
-          sh '''ls
+          sh '''pwd
+ls
 '''
         }
 
