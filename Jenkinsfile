@@ -36,7 +36,7 @@ ls
       }
     }
 
-    stage('') {
+    stage('Test') {
       agent {
         docker {
           args '-v $HOME/jenkins:/app -p 8000:8000'
