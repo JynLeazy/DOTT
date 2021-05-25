@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh '''go version
 GOPATH=/app
-mkdir /app/.cache
+#mkdir /app/.cache
 GOCACHE=/app/.cache'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''go get github.com/gorilla/mux
