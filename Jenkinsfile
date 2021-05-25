@@ -32,7 +32,8 @@ ls
 #go run api.go convert.go
 '''
           archiveArtifacts 'api'
-          sh 'go test'
+          sh '''apk add build-base
+go test'''
         }
 
       }
