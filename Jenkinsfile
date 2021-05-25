@@ -21,8 +21,8 @@ go get github.com/Pepegasca/goop
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
-#go mod init doot
-#go mod tidy
+go mod init doot
+go mod tidy
 #go build api.go
 go run api.go convert.go'''
           archiveArtifacts 'doot'
