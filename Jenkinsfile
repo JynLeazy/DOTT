@@ -5,7 +5,7 @@ pipeline {
       agent {
         docker {
           image 'golang:alpine3.13'
-          args '-v $HOME/jenkins:/app'
+          args '-v $HOME/jenkins:/app -p 8000:8000'
         }
 
       }
