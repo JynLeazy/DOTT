@@ -56,12 +56,8 @@ ls
         sh '''pwd
 ls'''
         dir(path: 'cidr_convert_api/go/') {
-          sh 
-          '''sonar-scanner \
-           -Dsonar.projectKey=dott \
-           -Dsonar.sources=. \
-           -Dsonar.host.url=http://35.82.28.56/ \
-           -Dsonar.login=a8fd5149bbd092aabe4af5656283ce9154bf34f2 '''
+          sh 'ls'
+         
         }
 
       }
