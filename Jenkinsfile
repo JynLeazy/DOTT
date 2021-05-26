@@ -35,12 +35,13 @@ ls
           sh '''apk add build-base
 '''
           catchError(message: 'failed unit tests', catchInterruptions: true) {
-            sh '''go get github.com/t-yuki/gocover-cobertura
+            sh '''go test
+#set +e
+go get github.com/t-yuki/gocover-cobertura
 go test -coverprofile=cover.out
-gocover-cobertura < cover.out > coverage.xml
-head coverage.xml
-go test
-#set +e'''
+# gocover-cobertura < cover.out > coverage.xml
+# head coverage.xml
+'''
           }
 
         }
