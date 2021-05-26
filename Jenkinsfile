@@ -47,8 +47,8 @@ ls
     stage('Test') {
       agent {
         docker {
-          args '-v $HOME/jenkins:/app -p 8000:8000'
-          image 'golang:alpine3.13'
+          image 'sonarsource/sonar-scanner-cli'
+          args '-v $HOME/jenkins:/app'
         }
 
       }
@@ -57,12 +57,13 @@ ls
 ls'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls
-sonar-scanner \\
+#sonar-scanner \\
 -Dsonar.projectKey=test-node-js \\
 -Dsonar.sources=. \\
 -Dsonar.css.node=. \\
 -Dsonar.host.url=http://35.82.28.56/ \\
--Dsonar.login="a8fd5149bbd092aabe4af5656283ce9154bf34f2"'''
+-Dsonar.login="a8fd5149bbd092aabe4af5656283ce9154bf34f2"
+sonar-scanner version'''
         }
 
       }
