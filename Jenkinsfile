@@ -49,7 +49,8 @@ go test
           }
 
           sh '''cp ./* /app/
-ls /app/'''
+ls /app/
+cat /app/coverage.out'''
         }
 
       }
@@ -68,8 +69,8 @@ ls /app/'''
 ls'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls /usr/src
-
-sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=. -Dsonar.host.url="$SONAR_HOST_URL" -Dsonar.login="$SONAR_LOGIN" -Dsonar.go.coverage.reportPaths=coverage.out
+cat /usr/src/coverage.out
+sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=. -Dsonar.host.url="$SONAR_HOST_URL" -Dsonar.login="$SONAR_LOGIN" -Dsonar.go.coverage.reportPaths=/usr/srccoverage.out
 '''
         }
 
