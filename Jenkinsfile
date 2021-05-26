@@ -57,12 +57,13 @@ ls
 ls'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls /usr/src
+
 sonar-scanner \\
 -Dsonar.projectKey=dott \\
 -Dsonar.sources=. \\
 -Dsonar.css.node=. \\ 
--Dsonar.host.url=http://44.242.157.83/ \\
--Dsonar.login="a8fd5149bbd092aabe4af5656283ce9154bf34f2"
+-Dsonar.host.url="$SONAR_HOST_URL" \\
+-Dsonar.login="$SONAR_LOGIN"
 '''
         }
 
