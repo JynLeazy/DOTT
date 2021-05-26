@@ -82,7 +82,7 @@ sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=. -Dsonar.host.url="$SONAR
         junit(testResults: '.xml', allowEmptyResults: true)
         sh '''mkdir -p /opt/dott/
 ls /opt/dott/
-cp $HOME/jenkins/* /opt/dott/
+cp -f $HOME/jenkins/* /opt/dott/
 ls /opt/dott/'''
       }
     }
