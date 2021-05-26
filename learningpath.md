@@ -63,17 +63,46 @@ Ansible Roles
       
       github token for jenkins
       https://github.com/settings/tokens/new?scopes=repo,read:user,user:email,write:repo_hook
- GO
+
+
+GO
     
-how install a packege withgo
+ Go tutorial
+ 
+ https://golang.org/doc/tutorial/greetings-multiple-people   
+    
+how install a packege with go
+
 https://stackoverflow.com/questions/30295146/how-can-i-install-a-package-with-go-
 https://golang.org/cmd/go/
 
-Where does go get install packages?
+go modules
+https://blog.golang.org/using-go-modules
+https://golang.org/doc/tutorial/create-module
+https://golang.org/doc/modules/developing
+https://stackoverflow.com/questions/67306638/go-test-results-in-go-cannot-find-main-module-but-found-git-config-in-users
+https://stackoverflow.com/questions/57591085/behaviour-of-go-mod-tidy-vs-go-build
+
+
+Wh* does go?
+
 https://stackoverflow.com/questions/50633092/where-does-go-get-install-packages
+https://stackoverflow.com/questions/30612611/what-does-go-build-build-go-build-vs-go-install
+
 
 how change cache do dir
 https://stackoverflow.com/questions/48983303/how-to-change-cache-directory-during-the-go-build-process
+
+
+go test
+
+https://golang.org/doc/tutorial/add-a-test
+https://levelup.gitconnected.com/automating-build-and-test-of-go-application-with-jenkins-9f96879b5479
+
+
+go artifacts
+
+https://docs.gocd.org/current/configuration/managing_artifacts_and_reports.html
   
 Reading the DOCKERFILE (DF)
 
@@ -94,6 +123,8 @@ The next COPY, will copy all "/go/" directory
 
 
 
+Jenkins
+
 Allow jenkins run docker
 https://docs.docker.com/engine/install/linux-postinstall/
 https://stackoverflow.com/questions/39638772/make-jenkins-run-docker-without-sudo
@@ -105,14 +136,101 @@ https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-con
 
 
 Jenkinsfile
+
+blueocean pipeline
+https://www.jenkins.io/doc/book/blueocean/pipeline-editor/
+https://www.jenkins.io/doc/book/blueocean/pipeline-run-details/
+https://medium.com/ecs-digital/building-a-ci-pipeline-with-blue-ocean-6bb9b02788eb
+
 Jenkins pipeline how to change to another folder
 https://stackoverflow.com/questions/52372589/jenkins-pipeline-how-to-change-to-another-folder
 
 
 Run Jenkins as a root, in case jenkins don´t have persmissions to create directorys
+
 https://stackoverflow.com/questions/29926773/run-shell-command-in-jenkins-as-root-user
 https://stackoverflow.com/questions/50646845/getting-sudo-unknown-uid-xxx-who-are-you-in-jenkins-pipeline-thats-building
 https://docs.docker.com/engine/install/linux-postinstall/
+
+jenkins error exit code 1
+
+https://stackoverflow.com/questions/60943751/how-to-fix-script-returned-exit-code-1-when-running-jenkins-pipeline
+
+
+How to build on Jenkins and publish artifacts via ssh with Pipelines
+
+https://medium.com/@weblab_tech/how-to-publish-artifacts-in-jenkins-f021b17fde71
+
+
+Jenkins Pipeline with Sonarqube and Gitlab
+
+https://medium.com/appfleet/jenkins-pipeline-with-sonarqube-and-gitlab-ebcca5ef2ebd#:~:text=Go%20Dashboard%20%3E%20Manage%20Jenkins%20%3E%20Manage,the%20result%20to%20SonarQube%20Server.
+
+
+Handling Environment Variables 
+https://www.jenkins.io/doc/book/security/environment-variables/
+
+jenkins junit plugin -already install
+https://plugins.jenkins.io/junit/
+
+move foward stage jenkins
+https://stackoverflow.com/questions/40600621/continue-jenkins-pipeline-past-failed-stage
+https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/
+
+
+jenkins test artifacts
+https://www.jenkins.io/doc/pipeline/tour/tests-and-artifacts/
+
+Alpine
+
+https://wiki.alpinelinux.org/wiki/GCC
+https://stackoverflow.com/questions/50984864/installing-gcc-from-source-on-alpine
+https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
+
+GCC (the GNU Compiler Collection)
+
+https://stackoverflow.com/questions/43580131/exec-gcc-executable-file-not-found-in-path-when-trying-go-build
+
+
+SonarQube
+
+https://docs.sonarqube.org/latest/requirements/requirements/
+https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
+https://docs.sonarqube.org/latest/analysis/analysis-parameters/
+
+sonar scanner
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+
+sonar login error
+https://community.sonarsource.com/t/not-authorized-please-check-the-properties-sonar-login-and-sonar-password/17452
+
+set up sonarqube in docker container 
+https://medium.com/@HoussemDellai/setup-sonarqube-in-a-docker-container-3c3908b624df
+
+sonar-scanner for jenkins
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
+
+sonar token
+https://docs.sonarqube.org/latest/user-guide/user-token/
+
+sonar-scanner docker
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+
+Docker
+
+docker run flags
+https://docs.docker.com/engine/reference/run/
+
+change dir inside docker
+https://stackoverflow.com/questions/44637748/change-directory-in-docker-alpine-failing
+https://stackoverflow.com/questions/49683612/copy-current-directory-in-to-docker-image
+
+
+docker images
+
+sonar-scanner
+https://hub.docker.com/r/sonarsource/sonar-scanner-cli/tags?page=1&ordering=last_updated
+
 
 https://golang.org/doc/tutorial/compile-install
 https://ieftimov.com/post/testing-in-go-go-test/
@@ -121,3 +239,10 @@ https://golang.org/doc/tutorial/getting-started
 https://stackoverflow.com/questions/37710108/go-coverage-report-integration-with-jenkins
 https://docs.sonarqube.org/latest/requirements/requirements/
 https://hub.docker.com/_/golang?tab=tags&page=2&ordering=last_updated
+
+
+
+
+
+
+
