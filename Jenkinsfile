@@ -48,11 +48,10 @@ go test
 '''
           }
 
+          sh '''ls
+#cp . /app/'''
         }
 
-        sh '''ls
-pwd
-'''
       }
     }
 
