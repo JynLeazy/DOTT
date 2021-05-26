@@ -25,11 +25,13 @@ ls /app
 go get github.com/gorilla/mux
 go get github.com/pkg/errors
 go get github.com/stretchr/testify/assert
+go get -u golang.org/x/lint/golint
 go mod init doot
 go mod tidy
 go build api.go convert.go
 ls
 #go run api.go convert.go
+golint convert.go convert_test.go api.go
 '''
           archiveArtifacts 'api'
           sh '''apk add build-base
