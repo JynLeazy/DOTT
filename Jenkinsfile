@@ -34,7 +34,7 @@ ls
           archiveArtifacts 'api'
           sh '''apk add build-base
 '''
-          catchError(message: 'failed unit tests', catchInterruptions: true, buildResult: 'SUCCESS') {
+          catchError(message: 'failed unit tests', catchInterruptions: true) {
             sh '''go get github.com/t-yuki/gocover-cobertura
 pwd
 ls
