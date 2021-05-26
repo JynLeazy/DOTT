@@ -33,12 +33,13 @@ ls
 '''
           archiveArtifacts 'api'
           sh '''apk add build-base
-go get github.com/t-yuki/gocover-cobertura
+'''
+          catchError(message: 'failed unit tests', catchInterruptions: true) {
+            sh '''go get github.com/t-yuki/gocover-cobertura
 go test -coverprofile=coverage.out
 gocover-cobertura < coverage.out > coverage.xml
-head coverage.xml'''
-          catchError(message: 'failed unit tests', catchInterruptions: true) {
-            sh '''go test
+head coverage.xml
+go test
 #set +e
 
 '''
