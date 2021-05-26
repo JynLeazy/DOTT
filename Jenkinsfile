@@ -48,7 +48,8 @@ go test
 '''
           }
 
-          sh 'cp . /app/'
+          sh '''cp ./* /app/
+ls /app/'''
         }
 
       }
