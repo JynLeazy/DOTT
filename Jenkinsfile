@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh '''go version
 GOPATH=/app
-#mkdir /app/.cache
+mkdir -p /app/.cache
 GOCACHE=/app/.cache
 apk add --update git
 '''
@@ -80,6 +80,9 @@ sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=. -Dsonar.host.url="$SONAR
     stage('Deploy') {
       steps {
         junit(testResults: '.xml', allowEmptyResults: true)
+        sh '''mkdir -p /opt/dott/
+ls /opt/dott/
+#cp $HOME/jenkins/* /opt/dott'''
       }
     }
 
