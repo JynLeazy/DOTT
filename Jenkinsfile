@@ -48,7 +48,7 @@ ls
       agent {
         docker {
           image 'sonarsource/sonar-scanner-cli'
-          args '-v $HOME/jenkins:/usr/src'
+          args '-v $HOME/jenkins:/usr/src -e SONAR_HOST_URL="http://44.242.157.83/"'
         }
 
       }
