@@ -39,13 +39,19 @@ ls
 pwd
 ls
 go test -coverprofile=coverage.out 2>/dev/null
-gocover-cobertura < coverage.out > coverage.xml
-head coverage.xml
-go test
 #set +e
 
 
 '''
+          }
+
+          catchError() {
+            sh '''gocover-cobertura < coverage.out > coverage.xml
+head coverage.xml'''
+          }
+
+          catchError() {
+            sh 'go test'
           }
 
           sh '''cp ./* /app/
