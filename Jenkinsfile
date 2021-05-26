@@ -36,17 +36,23 @@ ls
 '''
           catchError(message: 'failed unit tests', catchInterruptions: true) {
             sh '''go get github.com/t-yuki/gocover-cobertura
+pwd
+ls
 go test -coverprofile=coverage.out 2>/dev/null
 gocover-cobertura < coverage.out > coverage.xml
 head coverage.xml
 go test
 #set +e
 
+
 '''
           }
 
         }
 
+        sh '''ls
+pwd
+'''
       }
     }
 
