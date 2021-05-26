@@ -56,11 +56,11 @@ cat /app/coverage.out'''
       }
     }
 
-    stage('Test') {
+    stage('SonarQube') {
       agent {
         docker {
           image 'sonarsource/sonar-scanner-cli'
-          args '-v $HOME/jenkins:/usr/src -e SONAR_HOST_URL="http://35.81.76.94/" -e SONAR_LOGIN="a8fd5149bbd092aabe4af5656283ce9154bf34f2"'
+          args '-v $HOME/jenkins:/usr/src -e SONAR_HOST_URL="http://44.234.64.89/" -e SONAR_LOGIN="a8fd5149bbd092aabe4af5656283ce9154bf34f2"'
         }
 
       }
