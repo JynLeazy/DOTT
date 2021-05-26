@@ -60,9 +60,9 @@ ls'''
 sonar-scanner \\
 -Dsonar.projectKey=dott \\
 -Dsonar.sources=. \\
--Dsonar.css.node=. 
-#-Dsonar.host.url=http://35.82.28.56/ \\
-#-Dsonar.login="a8fd5149bbd092aabe4af5656283ce9154bf34f2"
+-Dsonar.css.node=. \\ 
+-Dsonar.host.url=http://44.242.157.83/ \\
+-Dsonar.login="a8fd5149bbd092aabe4af5656283ce9154bf34f2"
 '''
         }
 
