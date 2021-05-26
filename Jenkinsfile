@@ -36,7 +36,9 @@ ls
 '''
           catchError(message: 'failed unit tests', catchInterruptions: true) {
             sh '''go test
-#set +e'''
+#set +e
+go get github.com/t-yuki/gocover-cobertura
+go test -coverprofile=cover.out'''
           }
 
         }
