@@ -53,7 +53,7 @@ head coverage.xml
       agent {
         docker {
           image 'sonarsource/sonar-scanner-cli'
-          args '-v $HOME/jenkins:/usr/src -e SONAR_HOST_URL="http://44.242.146.190" -e SONAR_LOGIN="a8fd5149bbd092aabe4af5656283ce9154bf34f2"'
+          args '-v $HOME/jenkins:/usr/src -e SONAR_HOST_URL="http://35.81.76.94/" -e SONAR_LOGIN="a8fd5149bbd092aabe4af5656283ce9154bf34f2"'
         }
 
       }
@@ -63,7 +63,7 @@ ls'''
         dir(path: 'cidr_convert_api/go/') {
           sh '''ls /usr/src
 
-sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=. -Dsonar.host.url="$SONAR_HOST_URL" -Dsonar.login="$SONAR_LOGIN" -Dsonar.go.coverage.reportPaths=/usr/src/coverage.out
+sonar-scanner -Dsonar.projectKey=dott -Dsonar.sources=/var/lib/jenkins/workspace/DOTT_master/cidr_convert_api/go -Dsonar.host.url="$SONAR_HOST_URL" -Dsonar.login="$SONAR_LOGIN" -Dsonar.go.coverage.reportPaths=/usr/src/coverage.out
 '''
         }
 
