@@ -48,7 +48,7 @@ ls
       agent {
         docker {
           image 'sonarsource/sonar-scanner-cli'
-          args '-v $HOME/jenkins:/app'
+          args '-v $HOME/jenkins:/usr/src'
         }
 
       }
@@ -56,7 +56,7 @@ ls
         sh '''pwd
 ls'''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''ls
+          sh '''ls /usr/src
 #sonar-scanner \\
 #-Dsonar.projectKey=test-node-js \\
 #-Dsonar.sources=. \\
