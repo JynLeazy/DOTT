@@ -38,7 +38,9 @@ ls
             sh '''go test
 #set +e
 go get github.com/t-yuki/gocover-cobertura
-go test -coverprofile=cover.out'''
+go test -coverprofile=cover.out
+gocover-cobertura < cover.out > coverage.xml
+head coverage.xml'''
           }
 
         }
