@@ -1,5 +1,32 @@
+FROM golang:alpine3.13
 
-#THIS ISNT THE GOOD DOCKERFILE for go Search in cidr_convert_api/go/Dockerfile
+ENV GOPATH=/go:/app
 
-#FROM golang:alpine3.13
-#RUN apk add entr
+RUN apk add --update git
+RUN apk add build-base
+RUN apk add entr
+
+WORKDIR /app
+
+RUN go get github.com/gorilla/mux
+RUN go get github.com/pkg/errors
+RUN go get github.com/stretchr/testify/assert
+RUN go get -u golang.org/x/lint/golint
+COPY . .
+
+RUN go mod init doot
+RUN go mod tidy
+RUN go build api.go convert.go
+#RUN go run api.go convert.go
+RUN golint convert.go convert_test.go api.go
+
+RUN go get github.com/t-yuki/gocover-cobertura
+
+# till now, all good BD
+
+# RUN ash -c "go test -coverprofile=coverage.out && exit 0"
+
+# COPY . .
+# CMD ["ash", "-c", "goop go run api.go convert.go"]
+# docker build -t gom .
+# docker run -ti -p 8000:8000 gom
