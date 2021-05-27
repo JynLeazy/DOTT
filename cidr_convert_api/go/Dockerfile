@@ -31,6 +31,5 @@ RUN go get github.com/t-yuki/gocover-cobertura
 # docker build -t gom .
 # docker run -ti -p 8000:8000 gom
 
-#
 
 
