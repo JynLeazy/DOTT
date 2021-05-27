@@ -92,6 +92,6 @@ go version'''
   }
   environment {
     SONARKEY = credentials('tokensonar')
-    SONARHOST = 'http://52.4.174.27/9000'
+    SONARHOST = 'http://52.4.174.27:9000/'
   }
 }
