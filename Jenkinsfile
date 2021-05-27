@@ -88,7 +88,8 @@ ls /opt/dott/'''
 go version
 pwd
 #./api
-ls /app'''
+ls /app
+docker run -t -d -p 8001:8001 -p 8000:8000 -p 8002:8002 -v /opt/dott:/app golang:alpine3.13 cd /app | ls | entr ./app'''
       }
     }
 
