@@ -5,7 +5,7 @@ pipeline {
       agent {
         docker {
           args '-v $HOME/jenkins:/app'
-          image 'jynleazy/go-dott:tagname'
+          image 'jynleazy/go-dott:10'
         }
 
       }
@@ -79,8 +79,8 @@ ls /opt/dott/'''
     stage('Run in a docker container') {
       agent {
         docker {
-          image 'jynleazy/go-dott:tagname'
           args '-p 8000:8000 -p 8001:8001 -p 8002:8002 -v /opt/dott:/app'
+          image 'jynleazy/go-dott:10'
         }
 
       }
