@@ -36,7 +36,7 @@ golint convert.go convert_test.go api.go
           archiveArtifacts 'api'
           sh '''apk add build-base
 '''
-          catchError(message: 'failed unit tests', catchInterruptions: true) {
+          catchError(message: 'failed unit tests', catchInterruptions: true, buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
             sh '''go get github.com/t-yuki/gocover-cobertura
 pwd
 ls
@@ -47,12 +47,12 @@ go test -coverprofile=coverage.out 2>/dev/null
 '''
           }
 
-          catchError() {
+          catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
             sh '''gocover-cobertura < coverage.out > coverage.xml
 head coverage.xml'''
           }
 
-          catchError(buildResult: 'SUCCESS') {
+          catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
             sh 'go test'
           }
 
