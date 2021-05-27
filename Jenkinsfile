@@ -98,6 +98,6 @@ ls /opt/dott/'''
   }
   environment {
     SONARKEY = credentials('tokensonar')
-    SONARHOST = 'http://52.4.174.27:9000/'
+    SONARHOST = 'http://54.234.173.159:9000/'
   }
 }
