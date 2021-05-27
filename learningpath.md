@@ -71,6 +71,9 @@ GO
  
  https://golang.org/doc/tutorial/greetings-multiple-people   
     
+ how install golang
+ https://golang.org/doc/install
+    
 how install a packege with go
 
 https://stackoverflow.com/questions/30295146/how-can-i-install-a-package-with-go-
@@ -98,7 +101,19 @@ go test
 
 https://golang.org/doc/tutorial/add-a-test
 https://levelup.gitconnected.com/automating-build-and-test-of-go-application-with-jenkins-9f96879b5479
+https://medium.com/rungo/unit-testing-made-easy-in-go-25077669318
 
+golint
+
+https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important
+https://github.com/golang/lint
+http://networkbit.ch/golang-golint/
+
+go coverage
+https://blog.golang.org/cover#:~:text=Test%20coverage%20is%20a%20term,the%20test%20coverage%20is%2080%25.&text=An%20early%20test%20coverage%20tool%20for%20Go%20even%20worked%20the%20same%20way.
+https://stackoverflow.com/questions/24627871/how-to-maintain-good-go-package-test-coverage-when-dealing-with-obscure-errors
+https://stackoverflow.com/questions/10516662/how-to-measure-test-coverage-in-go
+https://docs.sonarqube.org/latest/analysis/coverage/
 
 go artifacts
 
@@ -177,6 +192,15 @@ move foward stage jenkins
 https://stackoverflow.com/questions/40600621/continue-jenkins-pipeline-past-failed-stage
 https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/
 
+jenkins credentials
+https://www.jenkins.io/doc/book/using/using-credentials/
+
+jenkins env vars
+https://www.jenkins.io/doc/pipeline/tour/environment/
+
+jenkins  handling credentials in env vars
+https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials
+
 
 jenkins test artifacts
 https://www.jenkins.io/doc/pipeline/tour/tests-and-artifacts/
@@ -198,6 +222,9 @@ https://docs.sonarqube.org/latest/requirements/requirements/
 https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
 https://docs.sonarqube.org/latest/analysis/analysis-parameters/
 
+sonnarqube coverage
+https://community.sonarsource.com/t/sonargo-code-coverage-0/19473/9
+
 sonar scanner
 https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 
@@ -216,15 +243,42 @@ https://docs.sonarqube.org/latest/user-guide/user-token/
 sonar-scanner docker
 https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 
+sonarsource for go
+https://www.sonarsource.com/go/
+https://docs.sonarqube.org/latest/analysis/languages/go/
+
+
 Docker
 
 docker run flags
 https://docs.docker.com/engine/reference/run/
+https://linuxize.com/post/docker-run-command/
+
+docker open ports
+https://docs.docker.com/config/containers/container-networking/
 
 change dir inside docker
 https://stackoverflow.com/questions/44637748/change-directory-in-docker-alpine-failing
 https://stackoverflow.com/questions/49683612/copy-current-directory-in-to-docker-image
 
+build docker image
+https://docs.docker.com/get-started/02_our_app/
+
+docker stops automatically after run cmd
+https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d
+
+docker change dir alpine
+https://stackoverflow.com/questions/44637748/change-directory-in-docker-alpine-failing
+
+Linux
+standar error
+https://www.cyberciti.biz/faq/unix-linux-redirect-error-output-to-null-command/
+
+entr cmd
+http://eradman.com/entrproject/
+
+lib elf interpreter
+https://support.quest.com/es-es/kb/117266/-lib-ld-linux-so-2-bad-elf-interpreter-no-such-file-or-directory
 
 docker images
 
