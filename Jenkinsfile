@@ -87,7 +87,8 @@ ls /opt/dott/'''
         sh '''ls
 go version
 pwd
-#./api'''
+#./api
+ls /app'''
         dir(path: '/app') {
           sh '''ls
 pwd'''
