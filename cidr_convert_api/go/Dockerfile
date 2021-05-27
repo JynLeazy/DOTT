@@ -24,7 +24,7 @@ RUN go get github.com/t-yuki/gocover-cobertura
 
 # till now, all its good BD
 
-RUN go test -coverprofile=coverage.out 2> /dev/null/error.txt
+RUN go test -coverprofile=coverage.out 2> error.txt
 
 # COPY . .
 # CMD ["ash", "-c", "goop go run api.go convert.go"]
