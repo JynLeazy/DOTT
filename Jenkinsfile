@@ -16,7 +16,6 @@ mkdir -p /app/.cache
 GOCACHE=/app/.cache
 '''
         dir(path: 'cidr_convert_api/go/') {
-          archiveArtifacts 'api'
           catchError(message: 'failed unit tests', catchInterruptions: true, buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
             sh '''go get github.com/t-yuki/gocover-cobertura
 pwd
