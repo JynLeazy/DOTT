@@ -52,7 +52,7 @@ go test -coverprofile=coverage.out 2>/dev/null
 head coverage.xml'''
           }
 
-          catchError() {
+          catchError(buildResult: 'SUCCESS') {
             sh 'go test'
           }
 
