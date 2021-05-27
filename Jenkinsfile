@@ -85,7 +85,8 @@ ls /opt/dott/'''
       }
       steps {
         sh '''ls
-go version'''
+go version
+./api'''
       }
     }
 
