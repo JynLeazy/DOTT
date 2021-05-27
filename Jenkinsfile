@@ -4,8 +4,8 @@ pipeline {
     stage('Build') {
       agent {
         docker {
-          image 'golang:alpine3.13'
           args '-v $HOME/jenkins:/app'
+          image 'jynleazy/go-dott:tagname'
         }
 
       }
@@ -14,28 +14,9 @@ pipeline {
 GOPATH=/app
 mkdir -p /app/.cache
 GOCACHE=/app/.cache
-apk add --update git
 '''
         dir(path: 'cidr_convert_api/go/') {
-          sh '''ls
-ls /app
-cp ./* /app
-ls /app
-#go get github.com/Pepegasca/goop
-go get github.com/gorilla/mux
-go get github.com/pkg/errors
-go get github.com/stretchr/testify/assert
-go get -u golang.org/x/lint/golint
-go mod init doot
-go mod tidy
-go build api.go convert.go
-ls
-#go run api.go convert.go
-golint convert.go convert_test.go api.go
-'''
           archiveArtifacts 'api'
-          sh '''apk add build-base
-'''
           catchError(message: 'failed unit tests', catchInterruptions: true, buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
             sh '''go get github.com/t-yuki/gocover-cobertura
 pwd
@@ -95,9 +76,23 @@ ls /opt/dott/'''
       }
     }
 
+    stage('Run in a docker container') {
+      agent {
+        docker {
+          image 'jynleazy/go-dott:tagname'
+          args '-p 8000:8000 -p 8001:8001 -p 8002:8002 -v /opt/dott:/app'
+        }
+
+      }
+      steps {
+        sh '''ls
+go version'''
+      }
+    }
+
   }
   environment {
     SONARKEY = credentials('tokensonar')
-    SONARHOST = 'http://54.84.43.235:9000/'
+    SONARHOST = 'http://52.4.174.27/9000'
   }
 }
