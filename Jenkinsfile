@@ -86,7 +86,8 @@ ls /opt/dott/'''
       steps {
         sh '''ls
 go version
-./api'''
+pwd
+#./api'''
       }
     }
 
