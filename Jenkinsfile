@@ -79,7 +79,7 @@ ls /opt/dott/'''
       agent {
         docker {
           args '-p 8000:8000 -p 8001:8001 -p 8002:8002 -v /opt/dott:/app'
-          image 'jynleazy/go-dott:10'
+          image 'jynleazy/go-dott:12'
         }
 
       }
@@ -89,11 +89,6 @@ go version
 pwd
 #./api
 ls /app'''
-        dir(path: '/app') {
-          sh '''ls
-pwd'''
-        }
-
       }
     }
 
