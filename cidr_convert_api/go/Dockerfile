@@ -22,6 +22,10 @@ RUN golint convert.go convert_test.go api.go
 
 RUN go get github.com/t-yuki/gocover-cobertura
 
+# till now, all its good BD
+
+RUN go test -coverprofile=coverage.out 2>/dev/null
+
 # COPY . .
 # CMD ["ash", "-c", "goop go run api.go convert.go"]
 # docker build -t gom .
